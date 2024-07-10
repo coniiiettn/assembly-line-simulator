@@ -26,11 +26,10 @@ namespace seneca
 		temp = ut.extractToken(str, pos, more);
 		m_num = stoi(temp);
 
-        Station::m_widthField = std::max(ut.getFieldWidth(), Station::m_widthField);
+		Station::m_widthField = std::max(ut.getFieldWidth(), Station::m_widthField);
 
 		m_desc = ut.extractToken(str, pos, more);
 		trim(m_desc);
-
 	}
 
 	const string &Station::getItemName() const

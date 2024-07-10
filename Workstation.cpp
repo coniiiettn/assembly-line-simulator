@@ -62,7 +62,7 @@ namespace seneca
 
 	void Workstation::display(std::ostream &os) const
 	{
-		if(m_pNextStation)
+		if (m_pNextStation)
 		{
 			os << getItemName() << " --> " << m_pNextStation->getItemName() << endl;
 		}
@@ -70,7 +70,6 @@ namespace seneca
 		{
 			os << getItemName() << " --> End of Line" << endl;
 		}
-		
 	}
 
 	Workstation &Workstation::operator+=(CustomerOrder &&newOrder)

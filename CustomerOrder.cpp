@@ -44,7 +44,7 @@ namespace seneca
 
 		CustomerOrder::m_widthField = std::max(ut.getFieldWidth(), CustomerOrder::m_widthField);
 	}
-	
+
 	CustomerOrder::CustomerOrder(const CustomerOrder &src)
 	{
 		throw runtime_error("Copy Constructor is called");
@@ -117,7 +117,7 @@ namespace seneca
 
 		return filled;
 	}
-	
+
 	bool CustomerOrder::isItemFilled(const std::string &itemName) const
 	{
 		bool filled = true;
@@ -163,7 +163,7 @@ namespace seneca
 		for (size_t i = 0; i < m_cntItem; i++)
 		{
 
-			os << "[" << right << setw(6)  << setfill('0') << m_lstItem[i]->m_serialNumber;
+			os << "[" << right << setw(6) << setfill('0') << m_lstItem[i]->m_serialNumber;
 
 			os << "] " << left << setw(m_widthField) << setfill(' ') << m_lstItem[i]->m_itemName << " - ";
 

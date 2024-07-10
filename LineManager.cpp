@@ -36,7 +36,6 @@ namespace seneca
 				{
 					tempSec = ut.extractToken(rec, pos, more);
 				}
-				
 
 				auto match = [&](Workstation *ws, const std::string &name)
 				{
@@ -57,7 +56,6 @@ namespace seneca
 
                              } });
 			}
-
 
 			for_each(m_activeLine.begin(), m_activeLine.end(), [&](Workstation *ws)
 					 {
@@ -81,7 +79,6 @@ namespace seneca
 		}
 	}
 
-
 	void LineManager::reorderStations()
 	{
 
@@ -99,7 +96,7 @@ namespace seneca
 	bool LineManager::run(std::ostream &os)
 	{
 		static size_t count = 1; // Declaring count as static to retain its value between function calls
-			os << "Line Manager Iteration: " << count++ << endl;
+		os << "Line Manager Iteration: " << count++ << endl;
 
 		if (!g_pending.empty())
 		{
@@ -130,7 +127,5 @@ namespace seneca
 		for_each(m_activeLine.begin(), m_activeLine.end(), [&](Workstation *ws)
 				 { ws->display(os); });
 	}
-	
-	
-	
-} 
+
+}

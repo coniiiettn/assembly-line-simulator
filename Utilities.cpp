@@ -13,12 +13,12 @@ namespace seneca
 	{
 		m_widthField = newWidth;
 	}
-	
+
 	size_t Utilities::getFieldWidth() const
 	{
 		return m_widthField;
 	}
-	
+
 	string Utilities::extractToken(const string &str, size_t &next_pos, bool &more)
 	{
 		string temp = str;
@@ -44,24 +44,23 @@ namespace seneca
 				{
 					m_widthField = token.length();
 				}
-				
+
 				if (temp.find(m_delimiter, next_pos) != string::npos)
 				{
 					more = true;
 					next_pos = pos + 1;
 				}
-
 			}
 		}
 
 		return token;
 	}
-	
+
 	void Utilities::setDelimiter(char newDelimiter)
 	{
 		Utilities::m_delimiter = newDelimiter;
 	}
-	
+
 	char Utilities::getDelimiter()
 	{
 		return Utilities::m_delimiter;
